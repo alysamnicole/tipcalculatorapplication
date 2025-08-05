@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tipcalcauto.PrimaryController">
+    <VBox alignment="CENTER" spacing="10.0" style="-fx-font-family: 'Arial';">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="TipCalculator" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Amount:" />
+            <TextField fx:id="amountTextField" promptText="e.g. 50.00" />
+        </HBox>
+
+
+        <Label fx:id="tipPercentageLabel" text="Custom Tip: 15%" />
+        <Slider fx:id="tipPercentageSlider" min="0" max="30" value="15" blockIncrement="1" />
+
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Tip:" />
+            <TextField fx:id="tipTextField" editable="false" />
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Total:" />
+            <TextField fx:id="totalTextField" editable="false" />
+        </HBox>
+
+        <Button text="Calculate" onAction="#handleCalculate" />
+    </VBox>
+</AnchorPane>
+
+
+
